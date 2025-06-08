@@ -37,3 +37,50 @@ This project is a **gender classification system** that uses a neural network to
 5. Save the trained model to `audio_gender_detection_model.h5`.
 6. Load the model to predict gender from new audio samples.
 
+## 🛠 How to Run
+
+1. Clone the dataset:
+   ```bash
+   git clone https://github.com/Jakobovski/free-spoken-digit-dataset.git
+   ```
+
+2. Install the required libraries:
+   ```bash
+   pip install librosa numpy tensorflow matplotlib scikit-learn
+   ```
+
+3. Open the notebook or script in your Python environment (Google Colab recommended).
+
+4. Set the correct path to the dataset:
+   ```
+   /content/free-spoken-digit-dataset/recordings/
+   ```
+
+5. Run all cells to train the model and evaluate its accuracy.
+
+6. Save the trained model:
+   ```
+   audio_gender_detection_model.h5
+   ```
+
+7. To make predictions:
+   - Preprocess your input `.wav` or `.opus` file
+   - Use the saved model to classify the gender
+   - Example output:
+     ```
+     Prediction: male
+     [[0.8945321]]
+     ```
+
+---
+
+## 📎 To-Do / Possible Improvements
+
+- Build a Streamlit or Flask web interface for real-time predictions
+- Add support for more diverse voices and accents
+- Perform hyperparameter tuning for better accuracy
+- Use audio augmentation techniques for better generalization
+- Try alternative features (e.g., Chroma, Spectral Contrast)
+- Train on a larger, more diverse dataset beyond FSDD
+
+
